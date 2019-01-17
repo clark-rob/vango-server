@@ -32,11 +32,9 @@ const router = express.Router()
 // GET /rounds
 router.get('/rounds', requireToken, (req, res) => {
   Round.find()
-    .populate('game')
+    // .populate('game')
     .then(rounds => {
-      // `rounds` will be an array of Mongoose documents
-      // we want to convert each one to a POJO, so we use `.map` to
-      // apply `.toObject` to each one
+
       return rounds.map(round => round.toObject())
     })
     // respond with status 200 and JSON of the rounds
@@ -50,7 +48,7 @@ router.get('/rounds', requireToken, (req, res) => {
 router.get('/rounds/:id', requireToken, (req, res) => {
   // req.params.id will be set based on the `:id` in the route
   Round.findById(req.params.id)
-    .populate('game')
+    // .populate('game')
     .then(handle404)
     // if `findById` is succesful, respond with 200 and "round" JSON
     .then(round => res.status(200).json({ round: round.toObject() }))
@@ -62,7 +60,7 @@ router.get('/rounds/:id', requireToken, (req, res) => {
 // POST /rounds
 router.post('/rounds', requireToken, (req, res) => {
   // set owner of new round to be current user
-  req.body.round.gameId = req.game_id
+  req.body.round.owner = req.user.id
 
   Round.create(req.body.round)
     // respond to succesful `create` with status 201 and JSON of new "round"

@@ -16,10 +16,10 @@ const roundSchema = new mongoose.Schema({
     required: true
   },
 
-  game: {
+  owner: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Game',
-    required: true
+    ref: 'User',
+    required: false
   }
 }, {
   timestamps: true

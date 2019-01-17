@@ -12,8 +12,7 @@ curl "${API}${URL_PATH}/${ID}" \
     "round": {
       "number": "'"${NUMBER}"'",
       "phrase": "'"${PHRASE}"'",
-      "drawing": "'"${DRAWING}"'",
-      "game": "'"${GAME}"'"
+      "drawing": "'"${DRAWING}"'"
     }
   }'
 
