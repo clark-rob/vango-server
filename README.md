@@ -29,7 +29,7 @@ The magic begins here!
 
 ### API
 #### Authentication
-API expects four authentication calls:
+|         |                       |
 |--------|------------------------|
 | POST   | `/sign-up`             |
 | POST   | `/sign-in`             |
@@ -40,7 +40,7 @@ API expects four authentication calls:
 - a `token` is needed to perform a PATCH and DELETE
 
 #### Rounds
-API can expect five calls that all require a signed in user:
+|         |                       |
 |--------|------------------------|
 | GET   | `/rounds`             |
 | GET   | `/rounds/:id`         |
@@ -48,6 +48,7 @@ API can expect five calls that all require a signed in user:
 | PATCH  | `/rounds/:id`        |
 | DELETE | `/rounds/:id`        |
 
+- API has five calls that all require a signed in user
 - scripts to test these calls can be found in the `scripts/rounds` folder
 - to test using scripts, use the authentication `sign-in` to get a user `token`
 
