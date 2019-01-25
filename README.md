@@ -282,22 +282,28 @@ a group of individuals creations.
 ## Future Fixes
 - Proceed with making a 'game' model that is the owner of the 'rounds'
 
-## User Stories
-- As a user, I want to be able to have authorized access so that I can play and
-view my current and past games
-- As a user, I want to be able to generate a random word(s) by clicking a button
-so that I can create a new game
+## Stories
+### User
+- As a user, I want to be able to have authorized access so that I can create and view my current and past drawings
+- As a user, I want to be able to label each drawing to understand what was drawn
 - As a user, I want to be able to draw on my screen on mouse click so that once
 my mouse is not clicked, the drawing stops
-- As a user, I want to be able to update my game after each round is complete so
-that I can continue playing another time
-- As a user, I want to be able to save past games so that I can view them at
+- As a user, I want to be able to update my drawing so that I can change any
+mistakes
+- As a user, I want to be able to save past drawings so that I can view them at
 another time
-- As a user, I want to be able to save past games so that I can delete them at
+- As a user, I want to be able to save past drawings so that I can delete them at
 another time
+### Developer
+- As a developer, I want to create an application that allows users to freely
+make small drawings with out errors
+- As a developer, I want each onscreen action to perform correctly and smoothly
+- As a developer, I want to be able to understand and read each piece of code
+to avoid prolonged debugging
+- As a developer, I want an application that can easily be reused and inserted within other applications
 
 
-# ERD
+## ERD
 ![alt ERD](./ERD.pdf)
 
 ## Resources
